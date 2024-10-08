@@ -1,0 +1,119 @@
+/* Layout for the header section */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of the overlay */
+    height: 100vh; /* Full viewport height */
+    color: white;
+    overflow: hidden; /* Ensure the overlay does not overflow */
+  }
+  
+  .header-container::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/justice.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Adjust this value for transparency (0 is fully transparent, 1 is fully opaque) */
+    z-index: 1; /* Ensures the overlay is beneath the text/form */
+  }
+  
+  .content {
+    position: relative; /* Position relative to stack content above the overlay */
+    z-index: 2; /* Ensures the content is above the overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px; /* Add some padding to the content */
+  }
+  /* Text section on the left side */
+  .text-section {
+    max-width: 50%;
+  }
+  
+  .text-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .text-section p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Form section on the right side */
+  .form-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: make form background slightly transparent */
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    color: black;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Styles for the form */
+  form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  form label {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  form button {
+    background-color: #ff4d4d;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-section, .form-section {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .form-section {
+      padding: 20px;
+      box-shadow: none;
+    }
+  }
+  

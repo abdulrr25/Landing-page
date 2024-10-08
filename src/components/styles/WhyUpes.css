@@ -1,0 +1,51 @@
+/* WhyUpes.css */
+.whyupes-container {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .whyupes-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .whyupes-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .whyupes-container li {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .whyupes-container li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Icons (Optional) */
+  .whyupes-container li::before {
+    content: '✔'; /* Using checkmark as a placeholder */
+    color: green;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .whyupes-container {
+      padding: 20px;
+    }
+  
+    .whyupes-container h2 {
+      font-size: 24px;
+    }
+  
+    .whyupes-container li {
+      font-size: 16px;
+    }
+  }
+  
